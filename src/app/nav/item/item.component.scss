@@ -1,0 +1,42 @@
+// View encapsulation disabled
+.app-nav-item {
+  $header-left-padding: 16px;
+  $header-padding: 0 24px 0 $header-left-padding;
+  $header-font-size: 14px;
+
+  .main-header {
+    padding: $header-padding;
+    font-size: $header-font-size;
+    font-weight: 500;
+  }
+
+  .sub-header {
+    padding-left: $header-left-padding * 2 !important;
+    font-size: $header-font-size;
+    font-weight: normal; // 400
+  }
+
+  .mat-list-item-content,
+  mat-expansion-panel-header {
+    @extend .main-header;
+  }
+
+  .mat-expansion-panel-body {
+    padding: 0 !important;
+  }
+
+  .nested-list {
+    padding: 0;
+    .mat-list-item-content {
+      @extend .sub-header;
+    }
+  }
+
+  * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
