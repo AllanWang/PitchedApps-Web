@@ -1,4 +1,5 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Child } from './expandable/expandable.component';
 
 @Component({
   selector: 'app-nav-item',
@@ -10,6 +11,8 @@ export class ItemComponent {
 
   @Input() title?: string;
 
-  @Input() children?: string[];
+  @Input() router?: string;
+
+  @Input() children?: Child[];
 
 }

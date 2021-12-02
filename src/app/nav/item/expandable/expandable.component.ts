@@ -9,6 +9,13 @@ export class ExpandableComponent {
 
   @Input() title?: string;
 
-  @Input() children?: string[];
+  @Input() router?: string;
 
+  @Input() children?: Child[];
+
+}
+
+export type Child = {
+  title: string
+  router: string
 }

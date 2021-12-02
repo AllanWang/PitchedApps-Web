@@ -1,5 +1,13 @@
 <mat-nav-list>
-  <app-nav-item title="Projects"></app-nav-item>
-  <app-nav-item title="Notes" [children]="['Calculus', 'Linear Algebra']"></app-nav-item>
+  <app-nav-item title="Projects" router="dev"></app-nav-item>
+  <app-nav-item title="Notes" router="notes" [children]="[
+  {
+    title: 'Calculus',
+    router: 'calc'
+  }, {
+    title:'Linear Algebra',
+    router: 'linear' 
+  }
+  ]"></app-nav-item>
   <app-nav-item title="Coding Notes"></app-nav-item>
 </mat-nav-list>

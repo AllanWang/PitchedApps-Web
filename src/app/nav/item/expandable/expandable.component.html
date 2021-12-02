@@ -5,6 +5,6 @@
     </mat-panel-title>
   </mat-expansion-panel-header>
   <mat-list class="nested-list">
-    <app-nav-item-basic *ngFor="let c of children" [title]="c"></app-nav-item-basic>
+    <app-nav-item-basic *ngFor="let c of children" [title]="c.title" [router]="router + '/' + c.router"></app-nav-item-basic>
   </mat-list>
 </mat-expansion-panel>

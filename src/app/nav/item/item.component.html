@@ -1,8 +1,9 @@
 <ng-container [ngTemplateOutlet]="children ? expandable : basic"></ng-container>
 
 <ng-template #basic>
-  <app-nav-item-basic class="app-nav-item" [title]="title"></app-nav-item-basic>
+  <app-nav-item-basic class="app-nav-item" [title]="title" [router]="router"></app-nav-item-basic>
 </ng-template>
 <ng-template #expandable>
-  <app-nav-item-expandable class="app-nav-item" [title]="title" [children]="children"></app-nav-item-expandable>
+  <app-nav-item-expandable class="app-nav-item" [title]="title" [router]="router" [children]="children">
+  </app-nav-item-expandable>
 </ng-template>

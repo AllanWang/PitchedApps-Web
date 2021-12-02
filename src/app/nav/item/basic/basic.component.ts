@@ -9,4 +9,6 @@ export class BasicComponent {
 
   @Input() title?: string;
 
+  @Input() router?: string;
+
 }

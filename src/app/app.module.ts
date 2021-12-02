@@ -14,6 +14,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { ItemComponent } from './nav/item/item.component';
 import { BasicComponent } from './nav/item/basic/basic.component';
 import { ExpandableComponent } from './nav/item/expandable/expandable.component';
+import { NotFoundComponent } from './content/not-found/not-found.component';
 
 
 @NgModule({
@@ -24,12 +25,14 @@ import { ExpandableComponent } from './nav/item/expandable/expandable.component'
     ItemComponent,
     BasicComponent,
     ExpandableComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
       { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: '**', component: NotFoundComponent },
     ]),
     BrowserAnimationsModule,
     MatExpansionModule,
