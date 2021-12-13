@@ -1,0 +1,15 @@
+<a #logoContainer class="logo-container" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()"
+  [routerLink]="animateHome ? '/' : null">
+  <svg viewBox="0 0 133 100" height="60" [ngClass]="{'logo-animated-home': animateHome}">
+    <!-- Draw order matters as we want middle two on top; Paths declared in scss -->
+    <!-- \... -->
+    <path id="line1" stroke="#f0f" />
+    <!-- .../ -->
+    <path id="line4" stroke="#f0f" />
+    <!-- ./.. -->
+    <path id="line2" [attr.stroke]="logoColor" />
+    <!-- ..\. -->
+    <path id="line3" [attr.stroke]="logoColor" />
+    <!-- <rect x="0" y="0" width="100%" height="100%" fill="rgba(0, 0, 0, 0.2)" /> -->
+  </svg>
+</a>
