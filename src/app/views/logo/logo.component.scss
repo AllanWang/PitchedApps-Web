@@ -16,10 +16,26 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  cursor: pointer;
+  margin-bottom: 8px;
 
-  svg path {
-    @extend %logo-path-base;
+  svg {
+    path {
+      @extend %logo-path-base;
+    }
+
+    // Main logo shape
+    #line1 {
+      d: path("M10,10 L38.25,90");
+    }
+    #line4 {
+      d: path("M123,10 L94.75,90");
+    }
+    #line2 {
+      d: path("M66.5,10 L38.25,90");
+    }
+    #line3 {
+      d: path("M66.5,10 L94.75,90");
+    }
   }
 
   &:hover {
@@ -28,6 +44,7 @@
         @extend %logo-path-home;
       }
 
+      // House shape
       #line1 {
         d: path("M25,48 L25,85");
       }
