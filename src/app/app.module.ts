@@ -15,6 +15,7 @@ import { ItemComponent } from './nav/item/item.component';
 import { BasicComponent } from './nav/item/basic/basic.component';
 import { ExpandableComponent } from './nav/item/expandable/expandable.component';
 import { NotFoundComponent } from './content/not-found/not-found.component';
+import { LogoComponent } from './views/logo/logo.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { NotFoundComponent } from './content/not-found/not-found.component';
     BasicComponent,
     ExpandableComponent,
     NotFoundComponent,
+    LogoComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
+@use 'app/views/logo/logo.component-theme.scss' as logo;
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -32,6 +33,7 @@ $pitchedapps-theme: mat.define-light-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($pitchedapps-theme);
+@include logo.theme($pitchedapps-theme);
 
 /* You can add global styles to this file, and also import other style files */
 

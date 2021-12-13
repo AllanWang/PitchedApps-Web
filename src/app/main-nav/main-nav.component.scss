@@ -1,3 +1,8 @@
 .mat-expansion-panel:not([class*='mat-elevation-z']) {
   box-shadow: none;
 }
+
+app-logo {
+  height: 100px;
+  width: 100px;
+}
